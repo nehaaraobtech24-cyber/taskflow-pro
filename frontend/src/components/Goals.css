@@ -1,0 +1,348 @@
+.goals-container {
+  min-height: 100vh;
+  background: transparent;
+  padding: 20px;
+  position: relative;
+}
+
+.goals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.goals-header h1 {
+  color: #667eea;
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.goals-header p {
+  color: #666;
+  margin: 5px 0 0 0;
+}
+
+.create-goal-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-goal-btn {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.create-goal-btn:hover {
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.goal-form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.goal-form-card h3 {
+  color: #667eea;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.submit-goal-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.no-goals {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.no-goals p {
+  color: #666;
+  font-size: 1.3em;
+}
+
+.goal-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  border-left: 6px solid #667eea;
+}
+
+.goal-card.completed {
+  border-left-color: #28a745;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+
+.goal-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.goal-header h3 {
+  color: #333;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.goal-type-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+.goal-type-badge.daily {
+  background: #17a2b8;
+}
+
+.goal-type-badge.weekly {
+  background: #667eea;
+}
+
+.goal-type-badge.monthly {
+  background: #764ba2;
+}
+
+.goal-description {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.goal-progress {
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.progress-text {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 1.1em;
+}
+
+.time-remaining {
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.goal-card.completed .progress-bar-fill {
+  background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+}
+
+.progress-percentage {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.completed-badge {
+  background: #28a745;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.increment-btn {
+  flex: 1;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.increment-btn:hover {
+  background: #5568d3;
+}
+
+.delete-goal-btn {
+  padding: 12px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-goal-btn:hover {
+  background: #c82333;
+}
+
+/* Dark Mode */
+body.dark-mode .goals-header,
+body.dark-mode .goal-form-card,
+body.dark-mode .goal-card,
+body.dark-mode .no-goals {
+  background: #16213e;
+  color: #eee;
+}
+
+body.dark-mode .goals-header h1,
+body.dark-mode .goal-form-card h3 {
+  color: #667eea;
+}
+
+body.dark-mode .goals-header p,
+body.dark-mode .goal-description,
+body.dark-mode .time-remaining,
+body.dark-mode .progress-percentage {
+  color: #ccc;
+}
+
+body.dark-mode .goal-header h3 {
+  color: #eee;
+}
+
+body.dark-mode .form-group label {
+  color: #eee;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+  background: #0f3460;
+  color: #eee;
+  border-color: #533483;
+}
+
+body.dark-mode .goal-card.completed {
+  background: #1a3a2e;
+}
+
+@media (max-width: 768px) {
+  .goals-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+}
